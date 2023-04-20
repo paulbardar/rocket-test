@@ -1,0 +1,242 @@
+html {
+	font-size: 10px;
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+	background: $body-bg;
+	color: $body-color;
+	font: $font-weight-base #{$font-size-base}/$line-height-base $font-family-base;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: flex;
+	flex-direction: column;
+	@include media-breakpoint-down(lg) {
+		font-size: $font-size-base-mob;
+		line-height:$line-height-base-mob;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: $links-color-base;
+	transition: $transition;
+}
+a.btn {
+	padding: 1.8rem 3.6rem;
+	text-transform: uppercase;
+	color: $mediumViolet;
+	font-size: 1.6rem;
+	transition: all .3s ease-in;
+	@include media-breakpoint-down(lg) {
+		font-size: 15px;
+	}
+	@include media-breakpoint-down(md) {
+		width: 100%;
+		padding: 1rem 3.6rem;
+	}
+}
+a.btn-puprple {
+	padding: 1.8rem 3.6rem;
+	background-color: $purple;
+	color: $mediumViolet;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	border: 2px solid transparent;
+	transition: all .3s ease-in;
+	&:hover {
+		background: $white;
+		border: 2px solid $purple;
+	}
+	@include media-breakpoint-down(lg) {
+		font-size: 14px;
+		padding: 14px 30px;
+	}
+}
+a.btn-transparent {
+	background: $white;
+	padding: 1.8rem 4.1rem;
+	border: 2px solid $purple;
+	text-transform: uppercase;
+	font-size: 1.6rem;
+	transition: all .3s ease-in;
+	&:hover {
+		background: $purple;
+		border: 2px solid transparent;
+	}
+}
+
+a:hover {
+	text-decoration: none;
+	color: $links-hover-color;
+}
+
+button,
+input[type="search"],
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: none;
+	cursor: pointer;
+	transition: $transition;
+}
+
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner {
+	border: none;
+	padding: 0;
+}
+
+.wrapper {
+	min-height: 100vh;
+	min-height: calc(var(--vh, 1vh) * 100);
+	display: flex;
+	flex-direction: column;
+}
+
+#main {
+	flex-grow: 1;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: $headings-font-family;
+	color: $darkviolet;
+	position: relative;
+	font-weight: 500;
+	margin: 0;
+	line-height: $line-height-title;
+}
+h1 {
+	font-size: $fs-h1-title;
+	line-height: 1.1;
+}
+
+h2 {
+	font-size: $fs-h2-title;
+}
+
+h3 {
+	font-size: $fs-h3-title;
+}
+h4 {
+	font-size: $fs-h4-title;
+}
+h5 {
+	font-size: $fs-h5-title;
+}
+h6 {
+	font-size: $fs-h6-title;
+}
+@include media-breakpoint-down(md) {
+	h1 {
+		font-size: $fs-h1-title-mob;
+	}
+
+	h2 {
+		font-size: $fs-h2-title-mob;
+	}
+
+	h3 {
+		font-size: $fs-h3-title-mob;
+	}
+	h4 {
+		font-size: $fs-h4-title-mob;
+	}
+	h5 {
+		font-size: $fs-h5-title-mob;
+	}
+	h6 {
+		font-size: $fs-h6-title-mob;
+	}
+}
+
+p {
+	margin: 0;
+}
+
+input[type="submit"],
+input[type="button"],
+button,
+.button,
+.btn {
+	display: inline-block;
+	background-color: $purple;
+	color: $mediumViolet;
+	padding: 1.8rem 4.1rem;
+	font-weight: 500;
+	font-size: 1.6rem;
+	text-transform: capitalize;
+	border: 2px solid transparent;
+	transition: all .3s ease-in;
+	&:hover {
+		background: $white;
+		border: 2px solid $purple;
+	}
+	&.btn-transparent {
+		background: transparent;
+		padding: 10px 29px;
+		color:  $mediumViolet;
+		border: 1px solid $white;
+		border: 2px solid transparent;
+		&:hover {
+			background: $white;
+			color:  $mediumViolet;
+			border: 2px solid $purple;
+		}
+	}
+	&.btn-border {
+		border: 2px solid $purple;
+		background: $white;
+		&:hover {
+			background: $white;
+			border: 2px solid $white;
+		}
+	}
+}
+
+
+// input[type="submit"]:hover,
+// input[type="button"],
+// button:hover,
+// .button:hover,
+// .btn:hover {
+// 	background-color: darken($btn-bg, 10%);
+// 	color: $white;
+// }
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	transition: all .3s ease-in;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+figure {
+	margin: 0;
+}
+
+@media (min-width: 1340px) {
+	.container, .container-sm, .container-md, .container-lg, .container-xl {
+		max-width: 1310px;
+	}
+}
+// dev2
+// dev3
+// dev4

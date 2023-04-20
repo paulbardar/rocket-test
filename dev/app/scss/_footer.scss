@@ -1,0 +1,135 @@
+/* footer */
+#footer {
+
+	.footer-wrap {
+		border-bottom: 1px solid $lightGray;
+		overflow: hidden;
+		@include media-breakpoint-down(lg) {
+			border-bottom: 1px solid $mediumGray;
+		}
+	}
+	.footer-top {
+		padding: 17px 0;
+		@include media-breakpoint-down(lg) {
+			padding-bottom: 20px;
+		}
+		.logo {
+			@include media-breakpoint-down(lg) {
+				padding-bottom: 10px;
+				display: block;
+				width: 100%;
+				text-align: center;
+				position: relative;
+				&:after {
+					content: '';
+					position: absolute;
+					width: 2000px;
+					height: 1px;
+					background: $mediumGray;
+					bottom: 0;
+					left: - 200px;
+				}
+			}
+			img {
+				width: 150px;
+				@include media-breakpoint-down(lg) {
+					width: 202px;
+				}
+			}
+		}
+		.main-nav {
+			width: 57%;
+			padding-right: 50px;
+			@include media-breakpoint-down(xl) {
+				width: 65%;
+			}
+			ul {
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				margin: 0;
+				margin-left: 11px;
+				padding: 0;
+			}
+			li {
+				list-style: none;
+				letter-spacing: 0.3px;
+				margin-left: 0;
+				font-size: 1.6rem;
+				&:first-child {
+					margin-left: 0;
+				}
+				a {
+					text-transform: capitalize;
+					color: $darkviolet;
+					font-size: inherit;
+					line-height: 2rem;
+					&:hover {
+						color: $links-hover-color;
+					}
+				}
+			}
+			@include media-breakpoint-down(lg) {
+				padding-top: 20px;
+				width: 100%;
+				padding-right: 0;
+				ul {
+					margin-bottom: 20px;
+					li{
+						margin-bottom: 16px;
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+	.footer-bottom {
+		padding-top: 26px;
+		padding-bottom: 40px;
+		.footer-rights {
+			font-size: 1.6rem;
+			line-height: 2rem;
+			column-rule: $gray;
+			text-transform: capitalize;
+		}
+		.footer-email {
+			a {
+				font-size: 1.6rem;
+				line-height: 2rem;
+			}
+		}
+		.footer-info {
+			@include media-breakpoint-down(lg) {
+				flex-direction: column-reverse;
+				align-items: center;
+				.footer-email {
+					padding-bottom: 30px;
+					position: relative;
+					&:after {
+						content: '';
+						position: absolute;
+						width: 160px;
+						height:1px;
+						background: $lightGray;
+						bottom: 15px;
+						left: 50%;
+						transform: translate(-50%, 0);
+					}
+				}
+				.footer-rights {
+					width: 65%;
+    				text-align: center;
+					@include media-breakpoint-down(lg) {
+						width: 92%;
+						font-size: 15px;
+					}
+				}
+			}
+		}
+		@include media-breakpoint-down(lg) {
+			padding-top: 15px;
+		}
+	}
+}

@@ -1,0 +1,128 @@
+.phraise-block {
+	padding-bottom: 90px;
+
+	.block-title {
+		margin-bottom: 40px;
+	}
+	.slider-block {
+		position: relative;
+		.slider-phraise-item {
+			padding: 0 10px;
+			&--content {
+				max-width: 844px;
+			}
+			.author-phraise {
+				margin-bottom: 10px;
+			}
+			.author-name {
+				text-transform: capitalize;
+				margin-bottom: 12px;
+			}
+		}
+		.slick-arrow {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+    		top: 29%;
+    		transform: translate(0, -50%);
+			width: 44px;
+			height: 44px;
+			border-radius: 50%;
+			background: $lightGray;
+    		cursor: pointer;
+    		transition: all .3s ease-in;
+			svg {
+				stroke: #4E4658;
+				transition: all .3s ease-in;
+			}
+			&:hover {
+				background: $purple;
+				svg {
+					stroke: #F2F2F2;
+				}
+			}
+		}
+		.slick-prev {
+			left: 7.5vw;
+		}
+		.slick-next {
+			right: 7.5vw;
+
+		}
+
+	}
+
+	.slides-numbers {
+		display: flex;
+		justify-content: center;
+		width: 187px;
+		margin: 0 auto;
+		background: linear-gradient(90deg, rgba(242, 242, 242, 0) 2.97%, #F2F2F2 51.62%, rgba(242, 242, 242, 0) 100%);
+	}
+	@include media-breakpoint-down(xl) {
+		.slider-block {
+			.slider-phraise-item {
+				&--content {
+					max-width: 60vw;
+				}
+			}
+
+			.slick-prev {
+				left: 1vw;
+			}
+			.slick-next {
+				right: 1vw;
+
+			}
+		}
+	}
+	@include media-breakpoint-down(lg) {
+		.slider-block {
+			.slider-phraise-item {
+				&--content {
+					max-width: 55vw;
+				}
+			}
+
+			.slick-prev {
+				left: 0;
+			}
+			.slick-next {
+				right: 0;
+
+			}
+		}
+	}
+	@include media-breakpoint-down(md) {
+		padding-bottom: 10px;
+		.block-title {
+			margin-bottom: 16px;
+		}
+		.slider-block  {
+			.slider-phraise-item {
+				padding: 0;
+				&--content {
+					max-width: 90vw;
+				}
+				.author-phraise {
+					margin-bottom: 21px;
+				}
+			}
+			.slick-arrow {
+				top: unset;
+				bottom: -22%;
+				width: 31px;
+				height: 31px;
+			}
+			.slick-prev {
+				left: 0;
+			}
+			.slick-next {
+				right: 0;
+
+			}
+		}
+
+	}
+}

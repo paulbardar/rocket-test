@@ -1,0 +1,27 @@
+.text-image-block {
+	padding-top: 4rem;
+	padding-bottom: 10rem;
+	&--text {
+		padding-top: 12px;
+		width: 69.3%;
+		max-width: 69.1rem;
+		@include media-breakpoint-down(lg) {
+			width: 100%;
+			margin-bottom: 14px;
+		}
+	}
+	&--img {
+		img {
+
+		}
+		@include media-breakpoint-down(lg) {
+			width: 100%;
+		}
+	}
+	@include media-breakpoint-down(lg) {
+		padding-bottom: 1rem;
+		.block-title {
+			margin-bottom: 17px !important;
+		}
+	}
+}

@@ -1,0 +1,149 @@
+.contact-section {
+	padding: 100px 0 75px;
+	@include media-breakpoint-down(lg) {
+		padding: 20px 0 30px;
+	}
+	.modal-thanks {
+		.modal-dialog {
+			top: 50%;
+			transform: translate(0, -50%);
+			.modal-content {
+				padding: 67px 78px;
+				width: 530px;
+
+			}
+			.modal-logo {
+				width: 75px;
+				height: 75px;
+				margin-bottom: 10px;
+			}
+			.modal-text {
+				white-space: nowrap;
+			}
+			@include media-breakpoint-down(lg) {
+				.modal-content {
+					width: 100%;
+					padding: 30px 30px;
+					.modal-text {
+						white-space: normal;
+					}
+
+				}
+
+			}
+		}
+	}
+	.block-title {
+		text-transform: capitalize;
+		@include media-breakpoint-down(lg) {
+			text-align: center;
+			line-height: 1;
+			margin-bottom: 15px !important;
+		}
+	}
+	.contact-desc {
+		.subtitle-green {
+			color: $green;
+			margin-bottom: 10px;
+			font-weight: 500;
+			@include media-breakpoint-down(lg) {
+				text-align: center;
+				margin-bottom: 18px;
+			}
+		}
+		.fw-medium {
+			font-weight: 500;
+			margin-bottom: 20px;
+			@include media-breakpoint-down(lg) {
+				margin-bottom: 14px;
+			}
+		}
+		.qoute-text {
+			margin-bottom: 20px;
+			letter-spacing: -0.1px;
+			br + br {
+				display: block;
+				margin-bottom: 16px;
+				content: '';
+			}
+			@include media-breakpoint-down(lg) {
+				margin-bottom: 14px;
+			}
+		}
+		.list-items {
+			padding-left: 24px;
+			li {
+				margin-bottom: 10px;
+			}
+			@include media-breakpoint-down(lg) {
+				padding-left: 20px;
+			}
+		}
+	}
+	.contact-wrap {
+		padding-left: 50px;
+		padding-top: 17px;
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			width: 2px;
+			background: #E0E0E0;
+		}
+		.contact-text-email {
+			margin-bottom: 25px;
+			a {
+				color: $green;
+				&:hover {
+					text-decoration: none;
+					color: $links-hover-color;
+				}
+			}
+		}
+		.contact-form {
+			&--item {
+				input,
+				textarea {
+					padding: 19px 30px;
+					background: $light-gray;
+					border-bottom: 2px solid $purple;
+					margin-bottom: 9px;
+					&:placeholder {
+						column-rule: $gray;
+						font-size: 1.6rem;
+						line-height: 1.2;
+					}
+				}
+			}
+			.btn {
+				padding: 1rem 3.5rem;
+			}
+			@include media-breakpoint-down(lg) {
+				&--item  {
+					input,
+					textarea {
+						padding: 10px 12px;
+					}
+					textarea {
+						padding-bottom: 20px;
+						margin-bottom: 5px;
+					}
+				}
+			}
+		}
+		@include media-breakpoint-down(lg) {
+			padding-left: 0;
+			padding-top: 48px;
+			&:before {
+				content: none;
+			}
+			h3 {
+				font-size: 28px;
+			}
+
+		}
+	}
+}

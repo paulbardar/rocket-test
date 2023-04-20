@@ -1,0 +1,84 @@
+// vars
+$images: '../images/';
+$fonts: '../fonts/';
+$fa-font-path: '../fonts/fontawesome';
+
+// fonts
+$iconfont: 'FontAwesome';
+$cormorant:  'Cormorant', serif;
+$montserrat: 'Montserrat', serif;
+
+// bootstrap grid
+$grid-columns: 12;
+$grid-gutter-width: 34px;
+$grid-gutter-width-mobile: $grid-gutter-width;
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1340px
+);
+
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1280px
+);
+
+// colors
+$white: #fff;
+$black: #000;
+$darkviolet:#4E4658;
+$mediumViolet:#65516D;
+$gray: #828282;
+$purple: #D2B4DE;
+$greenColor: #688B68;
+$light-gray: #F2F2F2;
+$darkGray: #4F4F4F;
+$lightGray: #E0E0E0;
+$mediumGray: #BDBDBD;
+
+
+// base vars
+$text-color-base: $darkviolet;
+$text-color-secondary: $gray;
+$body-bg: $white;
+$font-family-base: $montserrat;
+$font-size-base: 1.8rem;
+$font-size-base-mob: 1.5rem;
+$font-size-secondary: 1.4rem;
+$font-weight-base: 400;
+$line-height-base: 1.5;
+$line-height-base-mob: 1.5333;
+$line-height-title: 1.21;
+$links-color-base: $greenColor;
+$links-hover-color: $purple;
+$headings-font-family: $cormorant;
+$headings-font-weight: 500;
+
+$btn-color: $mediumViolet;
+$btn-bg: $purple;
+$bg-btn-secondary: transparent;
+
+$transition: all .3s ease;
+
+$font-title: $headings-font-family;
+$fs-h1-title: 12.8rem;
+$fs-h2-title: 6rem;
+$fs-h3-title: 3.4rem;
+$fs-h4-title: 3.1rem;
+$fs-h5-title: 2.8rem;
+$fs-h6-title: 2.2rem;
+
+$fs-h1-title-mob: 6.4rem;
+$fs-h2-title-mob: 3.8rem;
+$fs-h3-title-mob: 2.4rem;
+$fs-h4-title-mob: 2.4rem;
+$fs-h5-title-mob: 2.2rem;
+$fs-h6-title-mob: 2rem;
+// dev2
+// dev3
+// dev4

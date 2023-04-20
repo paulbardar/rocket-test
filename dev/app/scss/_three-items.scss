@@ -1,0 +1,81 @@
+.three-items-section {
+	padding-top: 40px;
+	padding-bottom: 90px;
+	position: relative;
+	&:before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0px;
+		bottom: 0;
+		// background: linear-gradient(360deg, rgba(162, 217, 206, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%), url(image.png), #FFFFFF;
+		background-image: url("../images/signature-bg.png");
+		z-index: -1;
+		background-size: cover;
+	}
+	// &:after {
+	// 	position: absolute;
+	// 	content: '';
+	// 	width: 100%;
+	// 	height: 100%;
+	// 	left: 0;
+	// 	bottom: 0;
+	// 	background-image: url("../../images/ellipse-btm.png");
+	// }
+
+	.block-title {
+		margin-bottom: 54px;
+		@include media-breakpoint-down(lg) {
+			letter-spacing: -0.5px;
+			margin-bottom: 10px;
+		}
+	}
+	.single-item {
+		padding: 0 12px;
+		@include media-breakpoint-down(lg) {
+			margin-bottom: 0;
+		}
+		img {
+			border-radius: 0 15px;
+			width: 100%;
+			// margin-bottom: 20px;
+			@include media-breakpoint-down(lg) {
+				width: 100%;
+			}
+		}
+		&--desc {
+			padding: 20px 15px 10px;
+			background: $white;
+		}
+		.item-text {
+			h4 {
+				margin-bottom: 1rem;
+				@include media-breakpoint-down(lg) {
+					line-height: 1.1;
+					margin-bottom: 14px;
+				}
+			}
+			p {
+				margin-bottom: 20px;
+			}
+		}
+		.item-links {
+			.btn {
+				margin-bottom: 5px;
+				padding: 1rem 3.6rem;
+				&:last-child {
+					margin-bottom: 0;
+					text-transform: uppercase;
+				}
+				@include media-breakpoint-down(lg) {
+					padding: 10px 29px;
+				}
+			}
+		}
+	}
+	@include media-breakpoint-down(lg) {
+		padding-top: 48px;
+		padding-bottom: 338px;
+	}
+}
