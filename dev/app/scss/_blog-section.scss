@@ -105,7 +105,9 @@
 		}
 		.blog-item-wrap {
 			margin-bottom: 15px;
-
+			&:last-child {
+				margin-bottom: 0;
+			}
 			.blog-item {
 				padding-bottom: 10px;
 				h3 {

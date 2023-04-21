@@ -16944,7 +16944,7 @@ a.btn {
 
 @media (max-width: 991.98px) {
 	a.btn {
-		font-size: 15px;
+		font-size: 14px;
 	}
 }
 
@@ -18058,7 +18058,7 @@ figure {
 
 .three-items-section .single-item .item-links .btn {
 	margin-bottom: 5px;
-	padding: 1rem 3.6rem;
+	padding: 1rem 1rem;
 	width: 75%;
 }
 
@@ -18357,6 +18357,9 @@ figure {
 	}
 	.blog-section .blog-item-wrap {
 		margin-bottom: 15px;
+	}
+	.blog-section .blog-item-wrap:last-child {
+		margin-bottom: 0;
 	}
 	.blog-section .blog-item-wrap .blog-item {
 		padding-bottom: 10px;
