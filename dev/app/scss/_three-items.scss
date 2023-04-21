@@ -13,6 +13,9 @@
 		background-image: url("../images/signature-bg.png");
 		z-index: -1;
 		background-size: cover;
+		@include media-breakpoint-down(lg)  {
+			background-image: unset;
+		}
 	}
 	// &:after {
 	// 	position: absolute;
@@ -34,7 +37,7 @@
 	.single-item {
 		padding: 0 12px;
 		@include media-breakpoint-down(lg) {
-			margin-bottom: 0;
+			margin-bottom: 10px;
 		}
 		img {
 			border-radius: 0 15px;
@@ -51,6 +54,7 @@
 		.item-text {
 			h4 {
 				margin-bottom: 1rem;
+				color: $mediumViolet;
 				@include media-breakpoint-down(lg) {
 					line-height: 1.1;
 					margin-bottom: 14px;
@@ -58,24 +62,27 @@
 			}
 			p {
 				margin-bottom: 20px;
+				color: $gray;
 			}
 		}
 		.item-links {
 			.btn {
 				margin-bottom: 5px;
 				padding: 1rem 3.6rem;
+				width: 75%;
 				&:last-child {
 					margin-bottom: 0;
 					text-transform: uppercase;
 				}
 				@include media-breakpoint-down(lg) {
 					padding: 10px 29px;
+					width: 87%;
 				}
 			}
 		}
 	}
 	@include media-breakpoint-down(lg) {
 		padding-top: 48px;
-		padding-bottom: 338px;
+		padding-bottom:30px;
 	}
 }

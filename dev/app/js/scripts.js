@@ -213,7 +213,12 @@ function mobileMenu() {
 
 		// Contact form modal
 		$('#contact-form').on('submit', function(e){
+
 			$('#thanksModal').modal('show');
+			$('#contact-form input[type="text"]').val('');
+			$('#contact-form input[type="email"]').val('');
+			$('#contact-form textarea').val('');
+			setTimeout(function(){$('#thanksModal').modal('hide')},3000);
   			e.preventDefault();
 		});
 	}); // ready

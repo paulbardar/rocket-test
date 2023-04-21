@@ -6,6 +6,9 @@
 	}
 	.slider-block {
 		position: relative;
+		.slick-list.draggable {
+			 cursor: grab;
+		}
 		.slider-phraise-item {
 			padding: 0 10px;
 			&--content {
@@ -111,15 +114,15 @@
 			}
 			.slick-arrow {
 				top: unset;
-				bottom: -22%;
+				bottom: -40px;
 				width: 31px;
 				height: 31px;
 			}
 			.slick-prev {
-				left: 0;
+				left: 20%;
 			}
 			.slick-next {
-				right: 0;
+				right: 20%;
 
 			}
 		}

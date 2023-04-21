@@ -8,7 +8,6 @@ body {
 	background: $body-bg;
 	color: $body-color;
 	font: $font-weight-base #{$font-size-base}/$line-height-base $font-family-base;
-	font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;

@@ -188,17 +188,18 @@
 				border-bottom: 1px solid $mediumGray;
 			}
 			.navbar-nav {
-				margin-bottom: 45px;
+				margin-bottom: 25px;
 			}
 			.mob-nav-item {
 				list-style: none;
 				letter-spacing: 0.3px;
-				font-size: 1.6rem;
+				font-size: 1.5rem;
 				border-bottom: 1px solid $lightGray;
-				padding: 15px 0;
+				padding: 19px 0;
 				a {
-					text-transform: capitalize;
+					// text-transform: capitalize;
 					color: $darkviolet;
+					letter-spacing: 0;
 					font-size: inherit;
 					line-height: 1;
 					display: block;
