@@ -17825,7 +17825,6 @@ figure {
 
 .slick-list.dragging {
 	cursor: pointer;
-	cursor: hand;
 }
 
 .slick-slider .slick-track,
@@ -18080,6 +18079,10 @@ figure {
 		padding-top: 48px;
 		padding-bottom: 30px;
 	}
+}
+
+.slick-list.dragging {
+	cursor: pointer;
 }
 
 .phraise-block {
