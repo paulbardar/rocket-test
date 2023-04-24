@@ -6,7 +6,8 @@
 	}
 	.slider-block {
 		position: relative;
-		.slick-list.draggable {
+		.slick-list.draggable,
+		.slick-list.dragging {
 			 cursor: grab;
 		}
 		.slider-phraise-item {

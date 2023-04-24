@@ -41,7 +41,8 @@
 			width: 57%;
 			padding-right: 50px;
 			@include media-breakpoint-down(xl) {
-				width: 65%;
+				width: 70%;
+				padding-right: 10px;
 			}
 			ul {
 				display: flex;

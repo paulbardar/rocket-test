@@ -17674,7 +17674,8 @@ figure {
 
 @media (max-width: 1339.98px) {
 	#footer .footer-top .main-nav {
-		width: 65%;
+		width: 70%;
+		padding-right: 10px;
 	}
 }
 
@@ -18093,7 +18094,8 @@ figure {
 	position: relative;
 }
 
-.phraise-block .slider-block .slick-list.draggable {
+.phraise-block .slider-block .slick-list.draggable,
+.phraise-block .slider-block .slick-list.dragging {
 	cursor: -webkit-grab;
 	cursor: grab;
 }
