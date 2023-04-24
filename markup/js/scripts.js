@@ -13,7 +13,7 @@ function loadFonts() {
 	WebFont.load({
 		custom: {
 			families: ['Font Awesome 5 Brands'],
-			urls: ['/css/fonts.css']
+			urls: ['css/fonts.css']
 		},
 		google: {
 			families: ['Cormorant:500,regular', 'Montserrat:400,500,regular']

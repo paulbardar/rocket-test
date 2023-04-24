@@ -18263,7 +18263,7 @@ figure {
 	height: 100%;
 	left: -10%;
 	top: 50%;
-	background-image: url("../../images/blog-ellipse.png");
+	background-image: url("../images/blog-ellipse.png");
 	background-size: cover;
 	z-index: 2;
 }
