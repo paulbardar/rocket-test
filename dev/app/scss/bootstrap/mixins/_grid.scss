@@ -46,12 +46,12 @@
 // Specify on a parent element(e.g., .row) to force immediate children into NN
 // numberof columns. Supports wrapping to new lines, but does not do a Masonry
 // style grid.
-@mixin row-cols($count) {
-  > * {
-    flex: 0 0 auto;
-    width: 100% / $count;
-  }
-}
+// @mixin row-cols($count) {
+//   > * {
+//     flex: 0 0 auto;
+//     width: 100% / $count;
+//   }
+// }
 
 // Framework grid generation
 //
@@ -68,21 +68,21 @@
         flex: 1 0 0%; // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
       }
 
-      .row-cols#{$infix}-auto > * {
-        @include make-col-auto();
-      }
+      // .row-cols#{$infix}-auto > * {
+      //   @include make-col-auto();
+      // }
 
-      @if $grid-row-columns > 0 {
-        @for $i from 1 through $grid-row-columns {
-          .row-cols#{$infix}-#{$i} {
-            @include row-cols($i);
-          }
-        }
-      }
+      // @if $grid-row-columns > 0 {
+      //   @for $i from 1 through $grid-row-columns {
+      //     .row-cols#{$infix}-#{$i} {
+      //       @include row-cols($i);
+      //     }
+      //   }
+      // }
 
-      .col#{$infix}-auto {
-        @include make-col-auto();
-      }
+      // .col#{$infix}-auto {
+      //   @include make-col-auto();
+      // }
 
       @if $columns > 0 {
         @for $i from 1 through $columns {
