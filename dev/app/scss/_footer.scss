@@ -85,6 +85,41 @@
 				}
 			}
 		}
+		.socials-feeds {
+			.socials-list {
+				list-style: none;
+				li {
+					margin-left: 10px;
+					&:first-child {
+						margin-left: 0;
+					}
+					a {
+						color: $gray;
+						display: inline-block;
+						svg {
+							vertical-align: bottom;
+							transform: translate(0px, -5px);
+							&:not(:root) {
+								overflow: hidden;
+							}
+
+							max-width: 22px;
+							height: 17px;
+							display: inline-block;
+						}
+						&:hover {
+							color: $purple;
+							svg {
+								fill: currentColor;
+							}
+						}
+					}
+					i {
+						font-size: 18px;
+					}
+				}
+			}
+		}
 	}
 	.footer-bottom {
 		padding-top: 26px;

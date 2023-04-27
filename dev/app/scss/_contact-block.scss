@@ -44,7 +44,7 @@
 	.contact-desc {
 		column-rule: $darkGray;
 		.subtitle-green {
-			color: $green;
+			color: $greenColor;
 			margin-bottom: 10px;
 			font-weight: 500;
 			@include media-breakpoint-down(lg) {
@@ -100,7 +100,7 @@
 		.contact-text-email {
 			margin-bottom: 25px;
 			a {
-				color: $green;
+				color: $greenColor;
 				&:hover {
 					text-decoration: none;
 					color: $links-hover-color;

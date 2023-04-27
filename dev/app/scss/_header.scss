@@ -17,14 +17,29 @@
 		.socials-list {
 			list-style: none;
 			li {
-				margin-left: 20px;
+				margin-left: 10px;
 				&:first-child {
 					margin-left: 0;
 				}
 				a {
 					color: $gray;
+					display: inline-block;
+					svg {
+						vertical-align: bottom;
+						transform: translate(0px, -5px);
+						&:not(:root) {
+							overflow: hidden;
+						}
+
+						max-width: 22px;
+						height: 17px;
+						display: inline-block;
+					}
 					&:hover {
 						color: $purple;
+						svg {
+							fill: currentColor;
+						}
 					}
 				}
 				i {
@@ -36,9 +51,10 @@
 	.header-main {
 		padding: 6px 0 6px;
 		@include media-breakpoint-down(lg) {
-			padding: 8px 0 11px;
+			padding: 11px 0 11px;
 		}
 		.logo {
+			font-size: 0;
 			@include media-breakpoint-down(lg) {
 				img {
 					max-width: 123px;
@@ -82,8 +98,11 @@
 
 		}
 		.cart-link {
-			font-size: 16px;
-			font-weight: 500;
+			// font-size: 16px;
+			// font-weight: 500;
+			padding: 6px 3px 0 0;
+			display: flex;
+			align-items: center;
 			span {
 				font-size: inherit;
 				font-weight: inherit;
@@ -105,9 +124,10 @@
 				}
 			}
 			@include media-breakpoint-down(lg) {
+				padding: 2px 3px 0 0;
 				span {
 					font-size: 12px;
-					margin-left: 5px;
+					margin-left: 9px;
 					&:before {
 						width: 24px;
 						height: 25px;
@@ -168,7 +188,7 @@
 					}
 				}
 				@include media-breakpoint-down(lg) {
-					margin-left: 20px;
+					margin-left: 17px;
 				}
 			}
 		}
@@ -176,7 +196,8 @@
 	.mob-nav {
 		&.show {
 			display: block !important;
-    		height: 100vh;
+    		height: calc(100vh - 60px);
+			overflow-y: scroll;
     		position: fixed;
     		top: 60px;
     		z-index: 20;

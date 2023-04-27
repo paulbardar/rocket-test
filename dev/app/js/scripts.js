@@ -24,7 +24,7 @@ function loadFonts() {
 // lazyLoad Images
 function lazyLoad() {
 	if ('loading' in HTMLImageElement.prototype) {
-		var images = document.querySelectorAll('img.lazyload');
+		let images = document.querySelectorAll('img.lazyload');
 		images.forEach(function (img) {
 			img.src = img.dataset.src;
 			img.onload = function() {
@@ -41,13 +41,13 @@ function lazyLoad() {
 	} else {
 		if (!loadLazyLoadScript) {
 			loadLazyLoadScript = true;
-			var script = document.createElement("script");
+			let script = document.createElement("script");
 			script.async = true;
 			script.src = '/js/lazysizes.min.js';
 			document.body.appendChild(script);
 		}
 		document.addEventListener('lazyloaded', function (e) {
-			var img = e.target;
+			let img = e.target;
 			if (img.classList.contains('lazyload-bg')) {
 				img.style.display = 'none';
 				img.parentNode.style.backgroundImage = 'url(' + img.dataset.src + ')';
@@ -122,7 +122,7 @@ function supportPolyfills() {
 			if (this == null)
 				throw new TypeError('can\'t convert ' + this + ' to object');
 
-			var str = '' + this;
+			let str = '' + this;
 			count = +count;
 			if (count != count)
 				count = 0;
@@ -140,7 +140,7 @@ function supportPolyfills() {
 			if (str.length * count >= 1 << 28)
 				throw new RangeError('repeat count must not overflow maximum string size');
 
-			var maxCount = str.length * count;
+			let maxCount = str.length * count;
 			count = Math.floor(Math.log(count) / Math.log(2));
 			while (count) {
 				str += str;
@@ -157,12 +157,19 @@ function supportPolyfills() {
 function mobileMenu() {
 	const openBtn = document.querySelector('.navbar-toggler'),
 		menuItem = document.querySelectorAll('.menu-link'),
+		body = document.body,
 		mobNav = document.querySelectorAll('.mob-nav');
 
 	openBtn.addEventListener('click', function(event) {
 		event.preventDefault();
+		if( body.classList.contains('mobmenu-opened') ) {
+			body.classList.remove('mobmenu-opened');
+		} else {
+			body.classList.add('mobmenu-opened');
+		}
 		if ( document.querySelector('.mob-nav').classList.contains('show') ) {
 			document.querySelector('.mob-nav').classList.remove('show');
+
 		} else {
 			console.log('show');
 		}
@@ -175,9 +182,15 @@ function mobileMenu() {
 			if( !document.querySelector('.navbar-toggler').classList.contains('collapsed' )){
 				document.querySelector('.navbar-toggler').classList.add('collapsed');
 			}
+			if( body.classList.contains('mobmenu-opened') ) {
+				body.classList.remove('mobmenu-opened');
+			}
 		});
 	}
 };
+
+// Phraise slider swiper
+
 
 // jQuery
 (function($){
@@ -185,32 +198,27 @@ function mobileMenu() {
 
 	$(document).ready(function() {
 		mobileMenu();
-		let slider = $('.slider-block');
-		var sliderParent = slider.parent();
 
-		var helpers = {
-			addZeros: function (n) {
-				return (n < 10) ? '' + n : '' + n;
+		function updSwiperNumericPagination() {
+  			this.el.querySelector(".swiper-numbers").innerHTML = '<span class="count">' + (this.realIndex + 1) + '</span>/<span class="total">' + this.el.slidesQuantity + "</span>";
 			}
-			};
-
-		slider.slick({
-      		dots: false,
-			infinite: true,
-      		slidesToScroll: 1,
-      		slidesToShow: 1,
-      		slide: '.slider-phraise-item',
-      		prevArrow: '.slick-prev',
-      		nextArrow: '.slick-next'
-    		});
-
-		slider.on('afterChange', function(event, slick, currentSlide){
-			 sliderParent.find('.slides-numbers .active').html(currentSlide + 1);
+		const phraiseSlider = document.querySelector('.slider-block-sw');
+		phraiseSlider.slidesQuantity = phraiseSlider.querySelectorAll(".swiper-slide").length;
+		const swiperPhraise = new Swiper( phraiseSlider, {
+			speed: 500,
+			slidesPerView: 1,
+			loop: true,
+			grabCursor: true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			on: {
+				init: updSwiperNumericPagination,
+				slideChange: updSwiperNumericPagination
+			}
 		});
-		var sliderItemsNum = slider.find('.slick-slide').not('.slick-cloned').length;
-    		sliderParent.find('.slides-numbers .total').html(sliderItemsNum);
-
-
+	
 		// Contact form modal
 		$('#contact-form').on('submit', function(e){
 
