@@ -3,9 +3,9 @@ let loadLazyLoadScript = false;
 
 document.addEventListener('DOMContentLoaded', function(){
 	loadFonts();
-	supportPolyfills();
+	// supportPolyfills();
 	correctVh();
-	lazyLoad();
+	// lazyLoad();
 });
 
 // load fonts
@@ -218,7 +218,7 @@ function mobileMenu() {
 				slideChange: updSwiperNumericPagination
 			}
 		});
-	
+
 		// Contact form modal
 		$('#contact-form').on('submit', function(e){
 

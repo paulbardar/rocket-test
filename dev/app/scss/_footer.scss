@@ -38,7 +38,7 @@
 			}
 		}
 		.main-nav {
-			width: 57%;
+			// width: 57%;
 			padding-right: 50px;
 			@include media-breakpoint-down(xl) {
 				width: 70%;
@@ -55,7 +55,7 @@
 			li {
 				list-style: none;
 				letter-spacing: 0.3px;
-				margin-left: 0;
+				margin-left: 30px;
 				font-size: 1.6rem;
 				&:first-child {
 					margin-left: 0;
@@ -74,10 +74,13 @@
 				padding-top: 20px;
 				width: 100%;
 				padding-right: 0;
+				margin-bottom: 20px;
 				ul {
-					margin-bottom: 20px;
+
+					margin-left: 0;
 					li{
 						margin-bottom: 16px;
+						margin-left: 0;
 						&:last-child {
 							margin-bottom: 0;
 						}
