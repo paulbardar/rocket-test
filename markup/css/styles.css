@@ -7123,7 +7123,7 @@ body.mobmenu-opened {
 	margin-bottom: 25px;
 }
 
-#header .mob-nav.show .mob-nav-item {
+#header .mob-nav.show .menu-item {
 	list-style: none;
 	letter-spacing: 0.3px;
 	font-size: 1.5rem;
@@ -7131,7 +7131,7 @@ body.mobmenu-opened {
 	padding: 19px 0;
 }
 
-#header .mob-nav.show .mob-nav-item a {
+#header .mob-nav.show .menu-item a {
 	color: #4E4658;
 	letter-spacing: 0;
 	font-size: inherit;
@@ -7139,11 +7139,11 @@ body.mobmenu-opened {
 	display: block;
 }
 
-#header .mob-nav.show .mob-nav-item a:hover {
+#header .mob-nav.show .menu-item a:hover {
 	color: #D2B4DE;
 }
 
-#header .mob-nav.show .mob-nav-item:last-child {
+#header .mob-nav.show .menu-item:last-child {
 	border: none;
 }
 
