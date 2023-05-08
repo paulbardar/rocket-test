@@ -5,6 +5,9 @@
 		padding-top: 12px;
 		width: 69.3%;
 		max-width: 69.1rem;
+		p {
+			margin-bottom: 15px;
+		}
 		@include media-breakpoint-down(lg) {
 			width: 100%;
 			margin-bottom: 14px;

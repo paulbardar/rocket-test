@@ -100,9 +100,27 @@
 		.cart-link {
 			// font-size: 16px;
 			// font-weight: 500;
+			color: $darkviolet;
 			padding: 6px 3px 0 0;
 			display: flex;
 			align-items: center;
+			svg {
+				vertical-align: bottom;
+				transform: translate(0px, 0px);
+				&:not(:root) {
+					overflow: hidden;
+				}
+
+				max-width: 32px;
+				height: 32px;
+				display: inline-block;
+			}
+			&:hover {
+				color: $purple;
+				svg {
+					fill: currentColor;
+				}
+			}
 			span {
 				font-size: inherit;
 				font-weight: inherit;
